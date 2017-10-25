@@ -1,49 +1,37 @@
 {
     "name": "electron-redux-ts-todo",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "src/main/main.ts",
+    "author": "Fabian Buentello",
+    "description": "Awesome Todo App!",
     "scripts": {
         "dev": "tsc && NODE_ENV=development ./node_modules/.bin/electron .",
         "package": "tsc && NODE_ENV=production ./node_modules/.bin/electron-forge package",
         "make": "tsc && NODE_ENV=production ./node_modules/.bin/electron-forge make",
         "publish": "tsc && NODE_ENV=production ./node_modules/.bin/electron-forge publish"
     },
-    "config": {
-        "forge": {
-            "make_targets": {
-                "win32": [
-                    "squirrel"
-                ],
-                "darwin": [
-                    "zip"
-                ],
-                "linux": [
-                    "deb",
-                    "rpm"
-                ]
-            },
-            "electronPackagerConfig": {
-                "packageManager": "yarn",
-                "icon": "icons/todo-app-icon.icns",
-                "asar": true
-            },
-            "electronWinstallerConfig": {
-                "name": "electron-redux-ts-todo"
-            },
-            "electronInstallerDebian": {},
-            "electronInstallerRedhat": {},
-            "github_repository": {
-                "owner": "initFabian",
-                "name": "electron-redux-ts-todo"
-            },
-            "windowsStoreConfig": {
-                "packageName": "",
-                "name": "Todo App"
+    "build": {
+        "appId": "com.fabian.todo-app",
+        "productName": "Awesome Todo",
+        "copyright": "Copyright © 2017 Fabian Buentello",
+        "mac": {
+            "category": "your.app.category.type",
+            "target": [
+                "zip",
+                "dmg"
+            ]
+        },
+        "publish": [
+            {
+                "provider": "github",
+                "owner": "initfabian",
+                "repo": "electron-redux-ts-todo"
             }
-        }
+        ]
     },
     "dependencies": {
-        "electron-compile": "^6.4.2",
+        "electron-log": "^2.2.10",
+        "electron-updater": "^2.15.0",
         "menubar": "^4.1.0",
         "react-bootstrap": "^0.31.3",
         "react-redux": "^5.0.6",
@@ -60,7 +48,7 @@
         "@types/react-redux": "^5.0.10",
         "@types/redux-thunk": "^2.1.0",
         "electron": "^1.7.9",
-        "electron-forge": "^4.1.2",
+        "electron-builder": "^19.41.0",
         "electron-prebuilt-compile": "1.8.1",
         "react": "^0.14.8",
         "react-dom": "^0.14.8"

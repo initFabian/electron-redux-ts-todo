@@ -1,12 +1,11 @@
 import { BrowserWindow } from 'electron'
-import { INDEX_HTML_PATH } from '../utils/constants'
 
 let mainWindow: BrowserWindow
 
-export const MainWindow = (): BrowserWindow => {
+export const MainWindow = (URL): BrowserWindow => {
     mainWindow = new BrowserWindow()
 
-    mainWindow.loadURL(INDEX_HTML_PATH)
+    mainWindow.loadURL(URL)
     if (process.env.NODE_ENV === 'development') {
         mainWindow.webContents.openDevTools()
     }
