@@ -1,6 +1,6 @@
 {
     "name": "electron-redux-ts-todo",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "main": "src/main/main.ts",
     "author": "Fabian Buentello",
     "description": "Awesome Todo App!",
