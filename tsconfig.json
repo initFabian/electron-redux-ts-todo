@@ -15,7 +15,7 @@
         "noImplicitAny": false,
         "strictNullChecks": true,
         "suppressImplicitAnyIndexErrors": true,
-        "noUnusedLocals": false,
+        "noUnusedLocals": true,
         "noEmit": true
     },
     "compileOnSave": true,

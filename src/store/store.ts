@@ -27,8 +27,8 @@ const consoleMessages = store => next => action => {
 }
 
 export const StoreHelpers = {
-    writeStateToFile: (filepath: string) => {
-        FileOps.updateFile(filepath, store.getState())
+    writeStateToFile: (filepath: string, _store: Store<StoreState>) => {
+        FileOps.updateFile(filepath, _store.getState())
     }
 }
 

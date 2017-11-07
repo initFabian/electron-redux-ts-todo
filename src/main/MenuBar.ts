@@ -1,7 +1,6 @@
 import * as menubar from 'menubar'
 import { INDEX_HTML_PATH } from '../utils/constants'
 import * as path from 'path'
-import { ipcMain, BrowserWindow } from 'electron'
 
 let mb: menubar
 

@@ -1,7 +1,7 @@
 {
     "name": "electron-redux-ts-todo",
     "productName": "Todo-App",
-    "version": "1.0.0",
+    "version": "1.2.5",
     "main": "src/main/main.ts",
     "scripts": {
         "dev": "tsc && NODE_ENV=development ./node_modules/.bin/electron .",
@@ -13,7 +13,9 @@
         "forge": "./forge.config.js"
     },
     "dependencies": {
+        "@types/electron-is-dev": "^0.3.0",
         "electron-compile": "^6.4.2",
+        "electron-is-dev": "^0.3.0",
         "electron-osx-sign": "^0.4.7",
         "menubar": "^4.1.0",
         "react-bootstrap": "^0.31.3",
