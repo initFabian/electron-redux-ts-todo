@@ -1,1 +1,1 @@
-{"filter":{"isCompleted":false},"todos":[{"title":"Create Github repo for project","completed":true},{"title":"Write documentation","completed":true},{"title":"Upload Repo","completed":true},{"title":"Publish application on Github","completed":false}],"errors":[]}
+{"filter":{"isCompleted":false},"todos":[{"title":"Create Github repo for project","completed":true},{"title":"Write documentation","completed":false},{"title":"Upload Repo","completed":true},{"title":"Publish application on Github","completed":true}],"errors":[]}

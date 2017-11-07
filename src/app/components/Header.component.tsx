@@ -3,11 +3,11 @@ import { Button } from 'react-bootstrap'
 
 interface HeaderComponentProps {
     onAddTodo(string): void
+    onShowFeedUrl(feedUrl: string)
 }
 
 export default (props: HeaderComponentProps) => {
     let textInput: HTMLInputElement
-
     const handleClick = () => {
         props.onAddTodo(textInput.value)
         textInput.value = ''
