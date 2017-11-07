@@ -1,7 +1,7 @@
 {
     "name": "electron-redux-ts-todo",
-    "productName": "Todo App",
-    "version": "1.2.2",
+    "productName": "Todo-App",
+    "version": "1.0.0",
     "main": "src/main/main.ts",
     "scripts": {
         "dev": "tsc && NODE_ENV=development ./node_modules/.bin/electron .",
@@ -10,39 +10,7 @@
         "deploy": "tsc && NODE_ENV=production ./node_modules/.bin/electron-forge publish"
     },
     "config": {
-        "forge": {
-            "make_targets": {
-                "win32": [
-                    "squirrel"
-                ],
-                "darwin": [
-                    "zip"
-                ],
-                "linux": [
-                    "deb",
-                    "rpm"
-                ]
-            },
-            "electronPackagerConfig": {
-                "packageManager": "yarn",
-                "icon": "icons/todo-app-icon.icns",
-                "asar": true,
-                "osxSign": true
-            },
-            "electronWinstallerConfig": {
-                "name": "electron-redux-ts-todo"
-            },
-            "electronInstallerDebian": {},
-            "electronInstallerRedhat": {},
-            "github_repository": {
-                "owner": "initFabian",
-                "name": "electron-redux-ts-todo"
-            },
-            "windowsStoreConfig": {
-                "packageName": "",
-                "name": "Todo App"
-            }
-        }
+        "forge": "./forge.config.js"
     },
     "dependencies": {
         "electron-compile": "^6.4.2",
